@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div id="status">Status message</div>
+    <h1>{{ title }}</h1>
+    <div style="clear:both"></div>
+    <div id="orders"></div>
+    <script data-main="/javascripts/main.js" src="/javascripts/library/requirejs/require.js"></script>
+    <script id="ordersTmpl" type="text/template">
+      <div class="heading">
+        <span class="row-id">ID</span>
+        <span class="row-customerName">Customer Name</span>
+        <span class="row-pn">PN</span>
+        <span class="row-allocated">Allocated</span>
+      </div>
+      <% _.each(orders, function(row) { %> <div class="row"><div>
+        <span class="row-id"><%= row.id %></span>
+        <span class="row-customerName"><%= row.customerName %></span>
+        <span class="row-pn"><%= row.pn %></span>
+        <span class="row-allocated"><%= row.allocated %></span>
+        <button class="row-process" id="button-process-<%= row.id %>" data-id="<%= row.id %>">Process</button>
+      </div><div style="clear:both"></div></div> <% }); %>
+    </script>
+  </body>
+</html>

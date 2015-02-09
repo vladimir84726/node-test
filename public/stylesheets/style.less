@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  padding-bottom: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#orders {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.row {
+  padding: 3px;
+}
+
+.heading {
+  .row;
+  border-bottom: 1px solid #ddd;
+}
+
+.row:nth-child(odd) {
+  background: #eee;
+}
+
+.row span, .heading span {
+  display: inline-block;
+  min-width: 30px;
+}
+
+.row-customerName, .row-pn, .row-allocated {
+  width: 200px;
+}
+
+.row-customerName {
+  color: #00a;
+}
+
+.row-process {
+  float: right;
+}
+
+#status {
+  display: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  float: right;
+}
